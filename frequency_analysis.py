@@ -21,14 +21,10 @@ def frequency_analysis(text_to_analysis):
     if text_letter in original_alphabet:
       frequency_letters[original_alphabet.index(text_letter)] += 1
     cc += 1
-  print()
-  return [{original_alphabet[i]: frequency_letters[i]} for i in range(26)]
-  
-
-
+  return original_alphabet, frequency_letters
 
 if __name__ == "__main__":
 
   my_text = "No meio do caminho tinha uma pedra Tinha uma pedra no meio do caminho Tinha uma pedra No meio do caminho tinha uma pedra. Nunca me esquecerei desse acontecimento Na vida de minhas retinas tão fatigadas. Nunca me esquecerei que no meio do caminho Tinha uma pedra Tinha uma pedra no meio do caminho No meio do caminho tinha uma pedra"
-
-  frequency_analysis(my_text)
+  alphabet, frequency = frequency_analysis(my_text)
+  print_graphic(frequency, alphabet)
