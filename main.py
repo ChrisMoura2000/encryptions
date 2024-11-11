@@ -28,13 +28,13 @@ def encryption():
 
   
   if encrypt_type == "1":
-    # print("Você escolheu Cifra de Cesar por padrão serão três letras deslocadas para direita masss")
-    # print("Aqui você tem opção de personalizar esse valor =D")
-    # steps = input("Digite um número entre 1 e 25 para definir a quantidade de casas a serem deslocadas: ")
-    # while not steps.isdigit():
-    #   steps = input("Valor inválido digite apenas numeros (de 1 até 25): ")
-    # while int(steps) < 1 or int(steps) > 25:
-    #   steps = input("Valor inválido digite apenas numeros (de 1 até 25): ")
+    print("Você escolheu Cifra de Cesar por padrão serão três letras deslocadas para direita masss")
+    print("Aqui você tem opção de personalizar esse valor =D")
+    steps = input("Digite um número entre 1 e 25 para definir a quantidade de casas a serem deslocadas: ")
+    while not steps.isdigit():
+      steps = input("Valor inválido digite apenas numeros (de 1 até 25): ")
+    while int(steps) < 1 or int(steps) > 25:
+      steps = input("Valor inválido digite apenas numeros (de 1 até 25): ")
     
     text = input("Dgite o texto para ver o resultado: ")
     text_encripted = cesar_cipher(text, is_decrypting=int(is_decrypting))
@@ -46,13 +46,7 @@ def encryption():
 
     text = input("Dgite o texto para ver o resultado: ")
     text_encripted = vigenere_cipher(text, keyword, is_decrypting=int(is_decrypting))
-    print(text_encripted)  
-
-# encryption()
-
-my_text = "No meio do caminho tinha uma pedra Tinha uma pedra no meio do caminho Tinha uma pedra No meio do caminho tinha uma pedra Nunca me esquecerei desse acontecimento Na vida de minhas retinas tao fatigadas"
-
-ciphred_message = cesar_cipher(my_text, 3)
-
-print(frequency_analysis(ciphred_message))
-print(frequency_analysis(my_text))
+    print(text_encripted) 
+ 
+if __name__ == "__main__":
+  encryption()
